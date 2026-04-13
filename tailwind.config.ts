@@ -15,13 +15,6 @@ const config: Config = {
         'primary-blue': 'var(--color-primary-blue)',
         lightGray: 'var(--color-lightGray)',
         deepGray: 'var(--color-deep-gray)'
-      },
-      fontSize: {
-        xs: '0.75rem', // 12px
-        sm: '0.875rem', // 14px
-        base: '1rem', // 16px
-        large: '1.125rem', // 18px
-        huge: '2.25rem' // 36px
       }
     }
   }
