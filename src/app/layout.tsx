@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import '../config/globals.css'
 import localFont from 'next/font/local'
+import { ThemeProvider } from '../components/ThemeProvider'
 
 const pretendard = localFont({
   src: '../../public/fonts/PretendardVariable.woff2',
@@ -22,8 +23,11 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${pretendard.variable} h-full antialiased`}>
-      <body className="flex min-h-full flex-col">{children}</body>
+      className={`${pretendard.variable} h-full antialiased`}
+      suppressHydrationWarning>
+      <body className="flex min-h-full flex-col">
+        <ThemeProvider>{children}</ThemeProvider>
+      </body>
     </html>
   )
 }
