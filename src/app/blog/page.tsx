@@ -1,3 +1,9 @@
+import Introduction from '@/components/Introduction'
+
 export default function Home() {
-  return <div>시작하기</div>
+  return (
+    <div>
+      <Introduction />
+    </div>
+  )
 }
