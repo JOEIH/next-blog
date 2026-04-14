@@ -26,7 +26,7 @@ export default function RootLayout({
       lang="en"
       className={`${pretendard.variable} h-full`}
       suppressHydrationWarning>
-      <body className="bg-[linear-gradient(to_right,var(--color-grid-line)_1px,transparent_1px),linear-gradient(to_bottom,var(--color-grid-line),transparent_1px)] bg-size-[24px_24px]">
+      <body className="bg-[linear-gradient(to_right,var(--color-grid-line)_1px,transparent_1px),linear-gradient(to_bottom,var(--color-grid-line),transparent_1px)] bg-[size:24px_24px]">
         <ThemeProvider>
           <Header />
 
