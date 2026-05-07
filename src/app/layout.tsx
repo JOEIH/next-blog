@@ -1,15 +1,8 @@
 import type { Metadata } from 'next'
 import '../config/globals.css'
-import localFont from 'next/font/local'
 import { ThemeProvider } from '../components/ThemeProvider'
 import Header from '../components/Header'
-
-const pretendard = localFont({
-  src: '../../public/fonts/PretendardVariable.woff2',
-  display: 'swap',
-  weight: '45 920',
-  variable: '--font-pretendard'
-})
+import { pretendard } from '../../public/fonts/fonts'
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -24,9 +17,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${pretendard.variable} h-full`}
+      className={`${pretendard.variable} font-pretendard h-full`}
       suppressHydrationWarning>
-      <body className="bg-[linear-gradient(to_right,var(--color-grid-line)_1px,transparent_1px),linear-gradient(to_bottom,var(--color-grid-line),transparent_1px)] bg-[size:24px_24px]">
+      <body className="mx-auto h-full max-w-200">
         <ThemeProvider>
           <Header />
 

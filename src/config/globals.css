@@ -12,6 +12,10 @@
   }
 }
 
+@theme inline {
+  --font-pretendard: var(--font-pretendard);
+}
+
 @theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -22,7 +26,19 @@
 
   --color-primary-blue: hsl(236 100% 64%);
 
-  --color-lightGray: hsl(0 0% 93%);
-
+  --color-lightGray: #eeeeee;
   --color-deep-gray: hsl(0 0% 51%);
+
+  --text-title: 2rem;
+  --text-title--line-height: 2.375rem;
+
+  --text-caption: 0.875rem;
+  --text-caption--line-height: 1.25rem;
+
+  --text-description: 1rem;
+  --text-description--line-height: 1.188rem;
 }
+
+/* .bg-pattern {
+  @apply bg-[linear-gradient(to_right,var(--color-grid-line)_1px,transparent_1px),linear-gradient(to_bottom,var(--color-grid-line),transparent_1px)] bg-size-[24px_24px];
+} */
