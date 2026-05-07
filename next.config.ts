@@ -1,9 +1,11 @@
 import type { NextConfig } from 'next'
+import path from 'path'
 
 const nextConfig: NextConfig = {
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/,
+      include: [path.resolve(__dirname, 'src')], // src 폴더 안의 SVG만 처리
       use: [
         {
           loader: '@svgr/webpack',
@@ -22,7 +24,7 @@ const nextConfig: NextConfig = {
 
   turbopack: {
     rules: {
-      '*.svg': {
+      './src/**/*.svg': {
         loaders: [
           {
             loader: require.resolve('@svgr/webpack'),
