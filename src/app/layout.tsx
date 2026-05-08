@@ -19,11 +19,11 @@ export default function RootLayout({
       lang="en"
       className={`${pretendard.variable} font-pretendard h-full`}
       suppressHydrationWarning>
-      <body className="mx-auto h-full max-w-200">
+      <body className="mx-auto h-full max-w-4xl">
         <ThemeProvider>
           <Header />
 
-          <main className="mx-auto max-w-3xl min-w-[320px] flex-col px-9 pt-16 sm:px-6">
+          <main className="mx-auto min-w-[320px] flex-col px-9 pt-16 sm:px-6">
             {children}
           </main>
         </ThemeProvider>

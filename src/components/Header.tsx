@@ -9,7 +9,7 @@ const pageLinks = [
 export default function Header() {
   return (
     <header className="border-b-lightGray fixed top-0 left-0 z-50 flex h-16 w-full items-center justify-between border-b backdrop-blur-md">
-      <div className="mx-auto flex w-full max-w-3xl items-center justify-between px-4">
+      <div className="mx-auto flex w-full max-w-4xl items-center justify-between px-4">
         <nav className="flex items-center gap-2">
           {pageLinks.map((link) => (
             <Link
