@@ -49,11 +49,18 @@ export const getPostDetail = async (category: string, slug: string) => {
   // gray-matter로 frontmatter와 content 분리
   const { data, content } = matter(rawMDX)
   const graymatter = data as PostMatter
-  const readingMinutes = Math.ceil(readingTime(content).minutes)
+
+  // 글 내용에서 줄바꿈, <br>, <hr>, <img> 태그를 일관된 형식으로 변환
+  const proceededContent = content
+    .replace(/\r\n/g, '\n')
+    .replace(/<br\s*\/?>/gi, '<br />')
+    .replace(/<hr\s*\/?>/gi, '<hr />')
+    .replace(/<img([^>]+[^\/])>/gi, '<img$1 />')
+  const readingMinutes = Math.ceil(readingTime(proceededContent).minutes)
 
   return {
     ...graymatter,
-    content,
+    content: proceededContent,
     readingMinutes
   }
 }
