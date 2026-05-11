@@ -1,3 +1,4 @@
+import PostBody from '@/components/post_detail/PostBody'
 import PostHeader from '@/components/post_detail/PostHeader'
 import { getPostDetail } from '@/lib/github'
 import { notFound } from 'next/navigation'
@@ -23,7 +24,7 @@ export default async function PostDetail({ params }: PostDetailProps) {
   return (
     <div className="px-9.5 py-7.5">
       <PostHeader post={post} />
-      <p>{post.content}</p>
+      <PostBody post={post} />
     </div>
   )
 }
