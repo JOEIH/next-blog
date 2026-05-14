@@ -1,6 +1,8 @@
 @import 'tailwindcss';
 @plugin '@tailwindcss/typography';
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @layer base {
   :root {
     --background: #ffffff;
@@ -38,6 +40,7 @@
 
 @theme inline {
   --font-pretendard: var(--font-pretendard);
+  --font-sans: var(--font-pretendard), sans-serif;
 }
 
 @theme {
@@ -52,13 +55,16 @@
   --color-point: #cee15d;
 
   --color-lightGray: #eeeeee;
-  --color-deep-gray: hsl(0 0% 51%);
+  --color-deep-gray: #838383;
 
   --text-title: 2rem;
   --text-title--line-height: 2.375rem;
 
   --text-caption: 0.875rem;
   --text-caption--line-height: 1.25rem;
+
+  --text-sub: 0.75rem;
+  --text-sub--line-height: 0.875rem;
 
   --text-description: 1rem;
   --text-description--line-height: 1.188rem;
